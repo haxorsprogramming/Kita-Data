@@ -1,3 +1,8 @@
+#dari github 
+#install python
+#install numpy
+#-> pip install numpy
+
 x1= input ('x1 = ');
 x2= input ('x2 = ');
 w1 = input ('bobot w1 = ');
