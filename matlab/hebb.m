@@ -1,6 +1,7 @@
 #dari github 
 #install python
 #install numpy
+#ah suka kau lah, capek aku
 #-> pip install numpy
 
 x1= input ('x1 = ');
