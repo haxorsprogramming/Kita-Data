@@ -3,6 +3,8 @@ package main
 import "fmt"
 import "net/http"
 
+var String motoo = 'Buat kodemu jadi berkah'
+
 func index(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintln(w, "Serverless Haxors with golang")
 }
