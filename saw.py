@@ -46,5 +46,39 @@ for x in range(3):
     bo += 1
 
 maxMatematika = max(nMatematika)
+maxFisika = max(nFisika)
+maxBiologi = max(nBiologi)
 
-print(maxMatematika)
+# normalisasi
+konvMatematika = []
+konvFisika = []
+konvBiologi = []
+
+for x in nMatematika:
+    nKonv = int(x) / int(maxMatematika)
+    konvMatematika.append(nKonv)
+
+for x in nFisika:
+    nKonv = int(x) / int(maxFisika)
+    konvFisika.append(nKonv)
+
+for x in nBiologi:
+    nKonv = int(x) / int(maxBiologi)
+    konvFisika.append(nKonv)
+
+# perhitungan nilai prefrensi 
+bbMatematika = 0.3
+bbFisika = 0.5
+bbBiologi = 0.2
+pMatematika = []
+pFisika = []
+pBiologi = []
+
+for x in konvMatematika:
+    nP = x * bbMatematika
+    pMatematika.append(nP)
+
+print(pMatematika)
+
+
+
