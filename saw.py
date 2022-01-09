@@ -64,7 +64,7 @@ for x in nFisika:
 
 for x in nBiologi:
     nKonv = int(x) / int(maxBiologi)
-    konvFisika.append(nKonv)
+    konvBiologi.append(nKonv)
 
 # perhitungan nilai prefrensi 
 bbMatematika = 0.3
@@ -78,7 +78,22 @@ for x in konvMatematika:
     nP = x * bbMatematika
     pMatematika.append(nP)
 
-print(pMatematika)
+for x in konvMatematika:
+    nP = x * bbFisika
+    pFisika.append(nP)
+
+for x in konvBiologi:
+    nP = x * bbBiologi
+    pBiologi.append(nP)
+
+tAdit = []
+tAdit.append(pMatematika[0])
+tAdit.append(pFisika[0])
+tAdit.append(pBiologi[0])
+
+totalAdit = sum(tAdit)
+
+print(totalAdit)
 
 
 
