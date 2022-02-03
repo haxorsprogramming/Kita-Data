@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #Importing dataset
-dataset=pd.read_csv("Mall_Customers.csv")
+dataset=pd.read_csv("Tulip_Data.csv")
 x=dataset.iloc[:,[3,4]].values
 
 #Using the elbow method to find the number of clusters
@@ -25,11 +25,11 @@ kmeans=KMeans(n_clusters=5,init='k-means++',max_iter=300,n_init=10,random_state=
 y_kmeans=kmeans.fit_predict(x)
 
 #Visualising the Clusters
-plt.scatter(x[y_kmeans==0,0],x[y_kmeans==0,1],s=100,c='red',label='Carefull')
-plt.scatter(x[y_kmeans==1,0],x[y_kmeans==1,1],s=100,c='blue',label='Standard')
-plt.scatter(x[y_kmeans==2,0],x[y_kmeans==2,1],s=100,c='green',label='Target')
-plt.scatter(x[y_kmeans==3,0],x[y_kmeans==3,1],s=100,c='cyan',label='Careless')
-plt.scatter(x[y_kmeans==4,0],x[y_kmeans==4,1],s=100,c='magenta',label='Sensible')
+plt.scatter(x[y_kmeans==0,0],x[y_kmeans==0,1],s=100,c='red',label='Red')
+plt.scatter(x[y_kmeans==1,0],x[y_kmeans==1,1],s=100,c='blue',label='Blue')
+plt.scatter(x[y_kmeans==2,0],x[y_kmeans==2,1],s=100,c='green',label='Purple')
+plt.scatter(x[y_kmeans==3,0],x[y_kmeans==3,1],s=100,c='cyan',label='White')
+plt.scatter(x[y_kmeans==4,0],x[y_kmeans==4,1],s=100,c='magenta',label='Yellow')
 plt.scatter(kmeans.cluster_centers_[0:,0],kmeans.cluster_centers_[:,1],s=300,c='Yellow',label='Centroids')
 plt.title('Clusters of Clients')
 plt.xlabel('Annual Income(K$)')
