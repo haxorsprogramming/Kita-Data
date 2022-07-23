@@ -2,6 +2,9 @@ import unittest
 import numpy as np
 from numpy import inf
 # import time
+import logging
+logging.basicConfig(filename="log.txt", level=logging.DEBUG)
+
 
 from tqdm import tqdm
 import time
@@ -44,9 +47,10 @@ class TestStringMethods(unittest.TestCase):
         # check that s.split fails when the separator is not a string
         with self.assertRaises(TypeError):
             s.split(2)
-
+    ord = 0
     for ite in range(iteration):
-
+        logging.debug("Testing iterasi ke : "+str(ord)+" hasil : SUCCESS")
+        ord += 1
         rute[:, 0] = 1
 
         for i in range(m):
